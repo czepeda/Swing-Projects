@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Guess_What" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="What is in your mind?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUz-cg-mba">
+                                <rect key="frame" x="20" y="28" width="280" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="whatisinyourmind.png" translatesAutoresizingMaskIntoConstraints="NO" id="OrV-8z-pCL">
+                                <rect key="frame" x="20" y="63" width="240" height="128"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="OSk-Um-XLI"/>
+                                    <constraint firstAttribute="width" constant="240" id="XIx-xg-e6J"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Think of a number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMU-H3-DMU">
+                                <rect key="frame" x="0.0" y="199" width="280" height="24"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQy-K3-3sd">
+                                <rect key="frame" x="137" y="226" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ksC-Vm-WSh"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oog-5r-el4">
+                                <rect key="frame" x="112" y="264" width="97" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="HsN-n4-jli"/>
+                                    <constraint firstAttribute="width" constant="97" id="NFx-Xg-BSF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oog-5r-el4" firstAttribute="centerX" secondItem="uQy-K3-3sd" secondAttribute="centerX" id="480-SU-IRa"/>
+                            <constraint firstItem="GMU-H3-DMU" firstAttribute="top" secondItem="OrV-8z-pCL" secondAttribute="bottom" constant="8" id="Eth-9E-oV8"/>
+                            <constraint firstItem="oog-5r-el4" firstAttribute="top" secondItem="uQy-K3-3sd" secondAttribute="bottom" constant="8" id="Ras-NS-k3Q"/>
+                            <constraint firstItem="uQy-K3-3sd" firstAttribute="top" secondItem="GMU-H3-DMU" secondAttribute="bottom" constant="3" id="VH5-pk-cSr"/>
+                            <constraint firstItem="OrV-8z-pCL" firstAttribute="top" secondItem="lUz-cg-mba" secondAttribute="bottom" constant="14" id="eTz-y0-1kd"/>
+                            <constraint firstItem="GMU-H3-DMU" firstAttribute="centerX" secondItem="OrV-8z-pCL" secondAttribute="centerX" id="oaa-Uf-g9M"/>
+                            <constraint firstItem="lUz-cg-mba" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="p2R-de-GtC"/>
+                            <constraint firstItem="uQy-K3-3sd" firstAttribute="centerX" secondItem="GMU-H3-DMU" secondAttribute="centerX" id="qMw-wt-iZx"/>
+                            <constraint firstItem="lUz-cg-mba" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sXR-7y-sl3"/>
+                            <constraint firstItem="OrV-8z-pCL" firstAttribute="centerX" secondItem="lUz-cg-mba" secondAttribute="centerX" id="wUp-cC-e01"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="answerTextField" destination="oog-5r-el4" id="6w0-ab-0z1"/>
+                        <outlet property="questionLabel" destination="GMU-H3-DMU" id="muq-lB-pSB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="544" y="304"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="whatisinyourmind.png" width="300" height="300"/>
+    </resources>
+</document>
